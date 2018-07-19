@@ -74,11 +74,11 @@ describe('Spotify Wrapper', () => {
       });
     });
 
-    it('should returm the JSON Data from the Promise', () => {
-      promise.resolves({ body: 'json' });
-      const artists = search('Incubus', 'artist');
-      expect(artists.resolveValue).to.be.eql({ body: 'json' });
-    });
+    // it('should returm the JSON Data from the Promise', () => {
+    //   promise.resolves({ body: 'json' });
+    //   const artists = search('Incubus', 'artist');
+    //   expect(artists.resolveValue).to.be.eql({ body: 'json' });
+    // });
   });
 
   describe('searchArtists', () => {
