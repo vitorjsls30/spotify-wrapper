@@ -44,6 +44,7 @@
   },
   "homepage": "https://github.com/vitorjsls30/js-tdd-course#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
