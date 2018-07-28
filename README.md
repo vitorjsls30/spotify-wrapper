@@ -1,8 +1,8 @@
 # Spotify Wrapper
 
-[![Build Status](https://travis-ci.org/vitorjsls30/spotify-wrapper.svg?branch=master)](https://travis-ci.org/vitorjsls30/spotify-wrapper)
+[![Build Status](https://travis-ci.org/vitorjsls30/vs-spotify-wrapper.svg?branch=master)](https://travis-ci.org/vitorjsls30/vs-spotify-wrapper)
 
-[![Coverage Status](https://coveralls.io/repos/github/vitorjsls30/spotify-wrapper/badge.svg)](https://coveralls.io/github/vitorjsls30/spotify-wrapper)
+[![Coverage Status](https://coveralls.io/repos/github/vitorjsls30/vs-spotify-wrapper/badge.svg?branch=master)](https://coveralls.io/github/vitorjsls30/vs-spotify-wrapper?branch=master)
 
 A Wrapper to work with the Spotidy Web API (https://developer.spotify.com/documentation/web-api/)
 
