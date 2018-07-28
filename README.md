@@ -4,7 +4,7 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/vitorjsls30/vs-spotify-wrapper/badge.svg?branch=master)](https://coveralls.io/github/vitorjsls30/vs-spotify-wrapper?branch=master)
 
-A Wrapper to work with the Spotidy Web API (https://developer.spotify.com/documentation/web-api/)
+A Wrapper to work with the Spotify Web API (https://developer.spotify.com/documentation/web-api/)
 
 ## Browser Support
 
