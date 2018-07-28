@@ -1,7 +1,7 @@
 {
   "name": "vs-spotify-wrapper",
   "version": "1.0.0",
-  "description": "A Wrapper to work with the Spotify Web API",
+  "description": "A Javascript Wrapper Library to work with the Spotify Web API",
   "main": "lib/index.js",
   "scripts": {
     "clear": "rimraf lib",
@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vitorjsls30/spotify-wrapper.git"
+    "url": "git+https://github.com/vitorjsls30/vs-spotify-wrapper.git"
   },
   "keywords": [
     "js",
@@ -45,9 +45,9 @@
   "author": "Vitor José <vitorjsls30@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vitorjsls30/js-tdd-course/issues"
+    "url": "https://github.com/vitorjsls30/vs-spotify-wrapper/issues"
   },
-  "homepage": "https://github.com/vitorjsls30/js-tdd-course#readme",
+  "homepage": "https://github.com/vitorjsls30/vs-spotify-wrapper#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.5",
