@@ -1,5 +1,5 @@
 {
-  "name": "spotify-wrapper",
+  "name": "vs-spotify-wrapper",
   "version": "1.0.0",
   "description": "A Wrapper to work with the Spotify Web API",
   "main": "src/index.js",
@@ -17,6 +17,10 @@
     "test:coverage": "nyc npm test",
     "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
   },
+  "files": [
+    "dist",
+    "lib"
+  ],
   "nyc": {
     "check-coverage": true,
     "functions": 80,
