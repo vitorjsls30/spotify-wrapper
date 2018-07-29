@@ -12,7 +12,10 @@
 
   <script src="../dist/spotify-wrapper.umd.js"></script>
   <script>
-    const albums = spotifyWrapper.searchAlbums('Incubus');
+    const spotify = new SpotifyWrapper({
+      token: 'BQDOz88ZQBLnH2RTGwEgafKj1MtLHEMcJcpP54lfKCM30FQeWrM5w48vgnnngMiXUo3sliNPqBiiF_tf8iBh0Rcj61ANDTfBHC-hvpJ-dV_l19cAnfJENXfs3N7QDfgoH11yCDXfCkyBoQ'
+    })
+    const albums = spotify.search.albums('U2');
     const albumsEl = document.getElementById('albums');
 
     albums
