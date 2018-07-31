@@ -52,11 +52,8 @@ var albums = spotify.search.artists('Choosen Artist');
 
 ### UMD in Browser
 ```html
-<!--to import non-minified version-->
+<!--importing library-->
 <script src="vs-spotify-wrapper.umd.js"></script>
-
-<!--to import minified version-->
-<script src="vs-spotify-wrapper.umd.min.js"></script>
 ```
 After that the library will be avaiable to the Global as `SpotifyWrapper`. Follow an example:
 ```js
