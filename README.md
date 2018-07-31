@@ -1,10 +1,10 @@
 # Spotify Wrapper
 
-[![Build Status](https://travis-ci.org/vitorjsls30/vs-spotify-wrapper.svg?branch=master)](https://travis-ci.org/vitorjsls30/vs-spotify-wrapper)
+[![Build Status](https://travis-ci.org/vitorjsls30/spotify-wrapper.svg?branch=master)](https://travis-ci.org/vitorjsls30/spotify-wrapper)
 
-[![Coverage Status](https://coveralls.io/repos/github/vitorjsls30/vs-spotify-wrapper/badge.svg?branch=master)](https://coveralls.io/github/vitorjsls30/vs-spotify-wrapper?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/vitorjsls30/spotify-wrapper/badge.svg)](https://coveralls.io/github/vitorjsls30/spotify-wrapper)
 
-A Wrapper to work with the Spotify Web API (https://developer.spotify.com/documentation/web-api/)
+A Wrapper to work with the Spotidy Web API (https://developer.spotify.com/documentation/web-api/)
 
 ## Browser Support
 
@@ -19,58 +19,56 @@ This library depends on [fetch](https://fetch.spec.whatwg.org/) to make requests
 
 ## Installation
 ```sh
-$ npm isntall vs-spotify-wrapper --save
+$ npm install vs-spotify-wrapper --save
 ```
 
 ## How to use
 
 ### ES6
 ```JS
-// to import a specific method
-import { method } from 'spotify-wrapper';
+// import wrapper package
+import SpotifyWrapper from 'vs-spotify-wrapper';
 
-// to import everything
-import * as spotifyWrapper from 'spotify-wrapper';
+// creating new instance
+const spotify = new SpotifyWrapper({
+    token: 'YOUR_GENERATED_TOKEN'
+});
+
+// using a method
+var albums = spotify.search.artists('Choosen Artist');
 ```
 
 ### CommonJS
 ```js
-var spotifyWrapper = require('spotify-wrapper');
+var spotifyWrapper = require('vs-spotify-wrapper');
+
+const spotify = new SpotifyWrapper({
+    token: 'YOUR_GENERATED_TOKEN'
+});
+
+// using a method
+var albums = spotify.search.artists('Choosen Artist');
 ```
 
 ### UMD in Browser
 ```html
 <!--to import non-minified version-->
-<script src="spotify-wrapper.umd.js"></script>
+<script src="vs-spotify-wrapper.umd.js"></script>
 
 <!--to import minified version-->
-<script src="spotify-wrapper.umd.min.js"></script>
+<script src="vs-spotify-wrapper.umd.min.js"></script>
 ```
-After that the library will be avaiable to the Global as `spotifyWrapper`. Follow an example:
+After that the library will be avaiable to the Global as `SpotifyWrapper`. Follow an example:
 ```js
-const albums = spotifyWrapper.searchAlbums('choosen artist');
+const spotify = new SpotifyWrapper({
+        token: 'YOUR_GENERATED_TOKEN_HERE'
+    });
+const albums = spotify.search.albums('Choosen Artist');
 ```
 ## Methods
 > Follow the mehods that the libray provides
 
-### search(query, types)
-> Search for information about artists, albums, tracks or playlists. Test in [Spotify Web Console](https://developer.spotify.com/web-api/console/get-search-item/)
-**Arguments**
-
-|Argument|Type|Options|
-|--------|----|-------|
-|`query`|*string*|'Any search query'|
-|`types`|*Array of strings*|['artist', 'album', 'track', 'playlist']|
-
-**Example**
-
-```js
-search('U2', ['artist', 'album'])
-    .then(data => {
-        // do what you want with the data
-    });
-```
-### searchAlbums(query)
+### search.albums(query)
 
 > Search for informations about Albums with provided query. Test in [Spotify Web Console](https://developer.spotify.com/web-api/console/get-search-item/) with type defined as *album*.
 
@@ -84,13 +82,13 @@ search('U2', ['artist', 'album'])
 **Example**
 
 ```js
-searchAlbums('Incubus')
+spotify.search.albums('U2')
   .then(data => {
     // do what you want with the data
   })
 ```
 
-### searchArtists(query)
+### search.artists(query)
 
 > Search for informations about Artists with provided query. Test in [Spotify Web Console](https://developer.spotify.com/web-api/console/get-search-item/) with type defined as *artist*.
 
@@ -104,13 +102,13 @@ searchAlbums('Incubus')
 **Example**
 
 ```js
-searchArtists('Incubus')
+spotify.search.artists('U2')
   .then(data => {
     // do what you want with the data
   })
 ```
 
-### searchTracks(query)
+### search.tracks(query)
 
 > Search for informations about Tracks with provided query. Test in [Spotify Web Console](https://developer.spotify.com/web-api/console/get-search-item/) with type defined as *track*.
 
@@ -124,13 +122,13 @@ searchArtists('Incubus')
 **Example**
 
 ```js
-searchTracks('Drive')
+spotify.search.tracks('Vertigo')
   .then(data => {
     // do what you want with the data
   })
 ```
 
-### searchPlaylists(query)
+### search.playlists(query)
 
 > Search for informations about Playlist with provided query. Test in [Spotify Web Console](https://developer.spotify.com/web-api/console/get-search-item/) with type defined as *playlist*.
 
@@ -144,13 +142,13 @@ searchTracks('Drive')
 **Example**
 
 ```js
-searchPlaylists('Happy Day')
+spotify.search.playlists('Happy Day')
   .then(data => {
     // do what you want with the data
   })
 ```
 
-### getAlbum(id)
+### album.getAlbum(id)
 
 > Search for informations about a specific Album with provided id. Test in [Spotify Web Console](https://developer.spotify.com/web-api/console/get-album/).
 
@@ -164,13 +162,13 @@ searchPlaylists('Happy Day')
 **Example**
 
 ```js
-getAlbum('4aawyAB9vmqN3uQ7FjRGTy')
+spotify.album.getAlbum('4aawyAB9vmqN3uQ7FjRGTy')
   .then(data => {
     // do what you want with the data
   })
 ```
 
-### getAlbums(ids)
+### album.getAlbums(ids)
 
 > Search for informations about some Albums with all id's. Test in [Spotify Web Console](https://developer.spotify.com/web-api/console/get-several-albums/).
 
@@ -183,13 +181,13 @@ getAlbum('4aawyAB9vmqN3uQ7FjRGTy')
 **Example**
 
 ```js
-getAlbum(['4aawyAB9vmqN3uQ7FjRGTy', '1A2GTWGtFfWp7KSQTwWOyo'])
+spotify.album.getAlbums(['4aawyAB9vmqN3uQ7FjRGTy', '1A2GTWGtFfWp7KSQTwWOyo'])
   .then(data => {
     // do what you want with the data
   })
 ```
 
-### getAlbumTracks(id)
+### album.getTracks(id)
 
 > Search for all tracks in a specific Album with provided id. Test in [Spotify Web Console](https://developer.spotify.com/web-api/console/get-album-tracks/).
 
@@ -202,7 +200,7 @@ getAlbum(['4aawyAB9vmqN3uQ7FjRGTy', '1A2GTWGtFfWp7KSQTwWOyo'])
 **Example**
 
 ```js
-getAlbum('4aawyAB9vmqN3uQ7FjRGTy')
+spotify.album.getTracks('4aawyAB9vmqN3uQ7FjRGTy')
   .then(data => {
     // do what you want with the data
   })
